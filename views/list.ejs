@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Todolist</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="box" id="heading">
+		<% if (title) { %>
+		  <h1><%= title %></h1>
+		<% } %>
+	</div>
+	<div class="box">
+		  <% list.map((item) => { %>
+    		<div class="item">
+				<input type="checkbox" name="" id="">
+				<p><%= item %></p>
+			</div>
+		  <% }); %>
+		<form action="/" class="item" method="POST">
+			<input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+			<button type="submit" name="button">+</button>
+		</form>
+	</div>
+</body>
+</html>
